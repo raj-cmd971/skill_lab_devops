@@ -4,25 +4,23 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/raj-cmd971/skill_lab_devops.git'
+                git branch: 'main', url: 'git@github.com:raj-cmd971/skill_lab_devops.git'
             }
         }
-        stage('Build') {
+
+        stage('Hello') {
             steps {
-                echo "Building project..."
+                echo "hello from jenkins pipelines!"
             }
         }
-        stage('Test') {
+
+        stage('Goodbye') {
             steps {
-                echo "Running tests..."
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo "Deploying..."
+                echo "jenkins finished successfully"
             }
         }
     }
 }
+
 
 
