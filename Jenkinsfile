@@ -1,21 +1,28 @@
-pipeline{
-     agent any
-     stages{
-         stage('checkout') {
-            steps{
-              git branch : 'main',url:
-'git@github.com:raj-cmd971/skill_lab_devops.git'
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/raj-cmd971/skill_lab_devops.git'
             }
-     }
-     stage ('hello'){
-        steps{
-      echo "hello from jenkins pipelines!"
+        }
+        stage('Build') {
+            steps {
+                echo "Building project..."
+            }
+        }
+        stage('Test') {
+            steps {
+                echo "Running tests..."
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo "Deploying..."
+            }
+        }
     }
- }
-      stage("good bye"){
-     steps{
-    echo "jenkins finished successfully"
-           }
-         }
-       }
+}
+
 
