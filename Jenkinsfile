@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'git@github.com:raj-cmd971/skill_lab_devops.git'
+                git branch: 'main', url: 'https://github.com/raj-cmd971/skill_lab_devops.git'
             }
         }
 
